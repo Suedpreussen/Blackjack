@@ -2,29 +2,34 @@
 {
     internal class Program
     {
-        static void Main(string[] args)
+        internal static void Main()
         {
+            Console.Clear(); // clear previous page, from which user has exited            
             Console.WriteLine("PLAY  *press p*");
             Console.WriteLine("CREDITS  *press c*");
             Console.WriteLine("END  *press e*");
-            char userInput = Console.ReadKey().KeyChar;
+            Switch();  
+        }
+        private static void Switch()
+        {
+            char userInput = Console.ReadKey(true).KeyChar;
             switch (userInput)
             {
                 case 'p':
-                    //Play(); future method
-                    Console.WriteLine("Play()");
+                    PrePlay.PrePlayPage();
                     break;
                 case 'c':
-                    //Credits(); future method
-                    Console.WriteLine("Credits()");
+                    Credits.CreditsPage();
                     break;
                 case 'e':
-                    //End(); future method
-                    Console.WriteLine("End()");
+                    Console.Clear();
+                    Console.WriteLine("You have exited the program");
+                    return;
+                default:
+                    Console.WriteLine("Wrong key pressed");
+                    Switch();
                     break;
             }
-
-
         }
     }
 }
