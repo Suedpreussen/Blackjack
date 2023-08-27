@@ -1,5 +1,4 @@
-﻿using System;
-namespace Blackjack_CLI
+﻿namespace Blackjack_CLI
 {
     internal class Credits
     {
