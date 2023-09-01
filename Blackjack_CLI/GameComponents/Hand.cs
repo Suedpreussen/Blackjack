@@ -1,7 +1,12 @@
 ﻿namespace Blackjack_CLI.GameComponents
 {
-    public struct Hand
+    public class Hand
     {
-        public Card;
+        Card card = new Card();
+    }
+    public class CardOnHand : Card
+    {
+        // Just add ID so playing with multiple decks is possible
+        // but maybe it's possible without tracking the ID of a card?
     }
 }

@@ -7,5 +7,9 @@
         // And the user points and hand
         // Exit game (are you certain?)
         // Save the game (needs access to rwx rights in game directory)
+
+        // Instantiate n players
+        // Show interface for n players
+
     }
 }
