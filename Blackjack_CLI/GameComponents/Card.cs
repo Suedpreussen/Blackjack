@@ -6,7 +6,7 @@ namespace Blackjack_CLI.GameComponents
     {
         public int Value;
         public bool Ace;
-        public Card(int value, bool ace=false)
+        public Card(int value=0, bool ace=false)
         {
             Value = value;
             Ace = ace;

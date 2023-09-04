@@ -1,4 +1,6 @@
-﻿namespace Blackjack_CLI
+﻿using Blackjack_CLI.GameComponents;
+
+namespace Blackjack_CLI
 {
     internal class Play
     {
@@ -11,5 +13,5 @@
         // Instantiate n players
         // Show interface for n players
 
-    }
+    }    
 }

@@ -1,4 +1,5 @@
-﻿namespace Blackjack_CLI.GameComponents
+﻿/*
+namespace Blackjack_CLI.GameComponents
 {
     public class Hand
     {
@@ -10,3 +11,4 @@
         // but maybe it's possible without tracking the ID of a card?
     }
 }
+*/
