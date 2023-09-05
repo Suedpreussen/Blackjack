@@ -1,12 +1,13 @@
-﻿namespace Blackjack_CLI.GameComponents
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Blackjack_CLI.GameComponents
 {
     public class Dealer 
     {
-        internal List<Card> Deck;
-        public List<Card> Hand;
-        internal Dealer(List<Card> deck, List<Card> hand = null)
+        public List<Card> Deck = new List<Card>();
+        public List<Card> Hand = new List<Card>();
+        public Dealer()
         {
-            deck = Deck;
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 2; j < 9; j++)
@@ -23,13 +24,13 @@
 
                 }
             }
-            Hand = hand;
         }
-        public void DealCard()
+        public void DealCard(List<Card> deck, List<Card> hand)
         {
-            Card card = Deck[0];
-            card = Deck[1];
-            int i = 4;
+            Random random = new Random();
+            int RandomIndex = random.Next(0, deck.Count);
+            deck.Remove(deck[RandomIndex]);
+            hand.Add(deck[RandomIndex]);
         }
     }
 }

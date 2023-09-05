@@ -16,7 +16,7 @@
             switch (userInput)
             {
                 case 'p':
-                    //Play(); future method
+                    Play.GameLoop();
                     break;
                 case 'n':
                     Console.WriteLine("enter number 1 through 7 and press enter");

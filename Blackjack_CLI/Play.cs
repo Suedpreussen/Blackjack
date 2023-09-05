@@ -12,6 +12,15 @@ namespace Blackjack_CLI
 
         // Instantiate n players
         // Show interface for n players
+        internal static void GameLoop()
+        {
+            Dealer GameDealer = new Dealer();
 
+            foreach (Card card in GameDealer.Deck)
+            {
+                
+                Console.WriteLine(string(card.Value), card.Ace);
+            }
+        }
     }    
 }
