@@ -5,7 +5,7 @@
         internal static void PrePlayPage()
         {
             Console.Clear(); // clear previous page, from which user has exited
-            Console.WriteLine("PLAY  *press p*");
+            Console.WriteLine("BEGIN  *press b*");
             Console.WriteLine("CHOOSE NUMBER OF PLAYERS  *press n*");
             Console.WriteLine("RETURN  *press r*");
             Switch();
@@ -15,7 +15,7 @@
             char userInput = Console.ReadKey(true).KeyChar;
             switch (userInput)
             {
-                case 'p':
+                case 'b':
                     Play.GameLoop();
                     break;
                 case 'n':

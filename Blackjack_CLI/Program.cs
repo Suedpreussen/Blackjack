@@ -33,6 +33,29 @@ namespace Blackjack_CLI
                     break;
             }
         }
+
+        // an attemp at writing abstract Switch() 
+        public void AbstractSwitch()
+        {
+            char userInput = Console.ReadKey(true).KeyChar;
+            switch (userInput)
+            {
+                case 'p':
+                    PrePlay.PrePlayPage();
+                    break;
+                case 'c':
+                    Credits.CreditsPage();
+                    break;
+                case 'e':
+                    Console.Clear();
+                    Console.WriteLine("You have exited the program");
+                    return;
+                default:
+                    Console.WriteLine("Wrong key pressed");
+                    Switch();
+                    break;
+            }
+        }
     }
 }
 

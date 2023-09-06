@@ -10,7 +10,7 @@ namespace Blackjack_CLI.GameComponents
         {
             for (int i = 0; i < 4; i++)
             {
-                for (int j = 2; j < 9; j++)
+                for (int j = 2; j < 10; j++)
                 {
                     Card card = new Card(j);
                     Deck.Add(card);
@@ -19,13 +19,12 @@ namespace Blackjack_CLI.GameComponents
                 {
                     Card card = new Card(10);
                     Deck.Add(card);
-                    Card ace = new Card(1, true);
-                    Deck.Add(ace);
-
                 }
+                Card ace = new Card(1, true);
+                Deck.Add(ace);
             }
         }
-        public void DealCard(List<Card> deck, List<Card> hand)
+        public static void DealCard(List<Card> deck, List<Card> hand)
         {
             Random random = new Random();
             int RandomIndex = random.Next(0, deck.Count);

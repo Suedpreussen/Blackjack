@@ -14,13 +14,32 @@ namespace Blackjack_CLI
         // Show interface for n players
         internal static void GameLoop()
         {
-            Dealer GameDealer = new Dealer();
+            Console.Clear(); // clear previous page, from which user has exited
 
-            foreach (Card card in GameDealer.Deck)
+            Dealer GameDealer = new Dealer();
+            Player Player1 = new Player("Piotr");
+            Dealer.DealCard(GameDealer.Deck, Player1.Hand);
+
+
+            // checking if dealers deck is properly initiated
+            foreach (Card card in Player1.Hand)
             {
-                
-                Console.WriteLine(string(card.Value), card.Ace);
+                string value = card.Value.ToString();
+                string ace = card.Ace.ToString();
+                /*if (card.Ace == true)*/
+                    Console.WriteLine(value, ace);
             }
         }
     }    
 }
+
+/*
+ Game Loop
+~there should be tutorial if the user plays for the first time~
+~but aside from that...~
+
+first thing -- dealing the cards -- happens automatically
+the user sees his cards all the time
+then the user has options:
+
+ */
