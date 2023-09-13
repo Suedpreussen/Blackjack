@@ -10,9 +10,9 @@ namespace Blackjack_CLI
             Console.WriteLine("PLAY  *press p*");
             Console.WriteLine("CREDITS  *press c*");
             Console.WriteLine("END  *press e*");
-            Switch();  
+            MainLoop();  
         }
-        private static void Switch()
+        private static void MainLoop()
         {
             char userInput = Console.ReadKey(true).KeyChar;
             switch (userInput)
@@ -29,13 +29,13 @@ namespace Blackjack_CLI
                     return;
                 default:
                     Console.WriteLine("Wrong key pressed");
-                    Switch();
+                    MainLoop();
                     break;
             }
         }
 
-        // an attemp at writing abstract Switch() 
-        public void AbstractSwitch()
+        // an attemp at writing abstract MainLoop() 
+        public void AbstractMainLoop()
         {
             char userInput = Console.ReadKey(true).KeyChar;
             switch (userInput)
@@ -52,7 +52,7 @@ namespace Blackjack_CLI
                     return;
                 default:
                     Console.WriteLine("Wrong key pressed");
-                    Switch();
+                    MainLoop();
                     break;
             }
         }

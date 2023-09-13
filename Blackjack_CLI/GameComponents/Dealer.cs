@@ -26,8 +26,10 @@ namespace Blackjack_CLI.GameComponents
         }
         public static void DealCard(List<Card> deck, List<Card> hand)
         {
+            // choose random number in range of deck length
             Random random = new Random();
             int RandomIndex = random.Next(0, deck.Count);
+
             deck.Remove(deck[RandomIndex]);
             hand.Add(deck[RandomIndex]);
         }

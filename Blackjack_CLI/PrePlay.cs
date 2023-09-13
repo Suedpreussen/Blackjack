@@ -8,15 +8,15 @@
             Console.WriteLine("BEGIN  *press b*");
             Console.WriteLine("CHOOSE NUMBER OF PLAYERS  *press n*");
             Console.WriteLine("RETURN  *press r*");
-            Switch();
+            MainLoop();
         }
-        private static void Switch()
+        private static void MainLoop()
         {
             char userInput = Console.ReadKey(true).KeyChar;
             switch (userInput)
             {
                 case 'b':
-                    Play.GameLoop();
+                    Play.Game();
                     break;
                 case 'n':
                     Console.WriteLine("enter number 1 through 7 and press enter");
@@ -24,12 +24,12 @@
                     if (0 < numberOfPlayers & numberOfPlayers < 8)
                     {
                         Console.WriteLine($"You chose a game with {numberOfPlayers} player(s)");
-                        Switch();
+                        MainLoop();
                     }
                     else
                     {
                         Console.WriteLine("You entered invalid number of players");
-                        Switch();
+                        MainLoop();
                     }
                     break;
                 case 'r':
@@ -37,7 +37,7 @@
                     break;
                 default:
                     Console.WriteLine("Wrong key pressed");
-                    Switch();
+                    MainLoop();
                     break;
             }
         }

@@ -7,9 +7,9 @@
             Console.Clear();
             Console.WriteLine("This app was made by MeSoftworks, 2023");
             Console.WriteLine("RETURN  *press r*");
-            Switch();
+            MainLoop();
         }
-        private static void Switch()
+        private static void MainLoop()
         {
             char userInput = Console.ReadKey(true).KeyChar;
             switch (userInput)
@@ -19,7 +19,7 @@
                     break;
                 default:
                     Console.WriteLine("Wrong key pressed");
-                    Switch();
+                    MainLoop();
                     break;
             }
         }
